@@ -1,15 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/03161f153e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="header">
-        
+        <div class="container">
+            <nav>
+                <img src="Images/deepanshu_logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer & CS Student</p>
+                <h1>Hi, I'm <span>Deepanshu Kaushik</span><br>based in the USA</h1>
+            </div>
+        </div>
+
     </div>
-    
+
+    <!---------------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Deep_s-photo__1_-removebg-preview-removebg-preview.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a Computer Science student at Northeastern University
+                        with a passion for building things that actually work and actually matter.
+                        From designing databases and developing front-end interfaces to exploring
+                        cybersecurity and AI, I enjoy working across the stack and picking up new
+                        skills along the way. I've had the chance to intern at Sports Media Inc.,
+                        contribute to real team projects, and publish research on AI and cybersecurity
+                        while still in my first two years of college. Outside of class, I'm part of
+                        Forge, Northeastern's engineering entrepreneurship club, where I'm building a
+                        VS Code extension that turns codebases into interactive 3D cities. I'm always
+                        looking for new problems to solve, new tools to learn, and new people to build
+                        with.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>Python, Java, JavaScript, TypeScript, SQL, C, HTML/CSS</li>
+                            <li><span>Frameworks & Tools</span><br>React.js, Node.js, Git/GitHub, Pandas, NumPy</li>
+                            <li><span>Cloud & DevOps</span><br>AWS (Cloud Practitioner Certified), Linux</li>
+                            <li><span>Databases</span><br>PostgreSQL, Relational DB Design, SQL Querying</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Sports Media Inc. — CS Intern</span><br>Built front-end for an AI Voice Agent
+                                using HTML, CSS & JavaScript</li>
+                            <li><span>Forge / Codescape — Product Lab</span><br>Built a VS Code extension that
+                                visualizes Java codebases as interactive 3D cities</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Northeastern University</span><br>B.S. Computer Science, Minor in Business
+                                Administration — GPA 3.56</li>
+                            <li><span>Relevant Coursework</span><br>OOD, Databases, Cloud Computing, Cybersecurity,
+                                Algorithms, Data Science</li>
+                            <li><span>Certifications</span><br>AWS Cloud Practitioner, AWS Web Application Builder, NEU
+                                AI in the Workplace Badge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------services--------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Software Development</h2>
+                    <p>Building full-stack applications and tools using Python, Java, JavaScript, and React — from
+                        database design to front-end interfaces.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>AI Automation</h2>
+                    <p>Building automated workflows using n8n, integrating APIs, web forms, and AI tools to streamline
+                        processes for real-world use cases.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-ns8"></i>
+                    <h2>Cybersecurity</h2>
+                    <p>Published research on AI and cybersecurity. Hands-on experience with CTF challenges covering
+                        privilege escalation, steganography, and exploit development.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!---------contact--------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> dkaushik.career@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> (732)-496-0966</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/deepansh__kaushik/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dkaushik06/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Images/Deepanshu Kaushik's Resume - Internships.pdf" class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright Deepanshu</p>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx78HuNTzNEic6L8GtQRGvQG6DCG2Tuw7o4oUyinZqbcXK06jZBJW72tMZqqvDisQiS/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => response.json())
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
 </body>
+
 </html>
